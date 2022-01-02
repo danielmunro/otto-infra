@@ -3,7 +3,7 @@
 ## Cluster Setup
 
 ```
-kind create cluster --config clusters/dev/cluster-config.yaml
+kind create cluster --config cluster-config.yaml
 
 # apply ingress patches for local cluster
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
