@@ -11,7 +11,7 @@ spec:
 kind: Endpoints
 apiVersion: v1
 metadata:
-  name: kafka-ep
+  name: kafka
 subsets:
   -
     addresses:
