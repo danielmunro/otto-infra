@@ -1,0 +1,23 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kafka
+spec:
+  selector: {}
+  ports:
+    - port: 9092
+      name: kafka
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: kafka-ep
+subsets:
+  -
+    addresses:
+      -
+        ip: "192.168.1.20"
+    ports:
+      -
+        port: 9092
+        name: kafka
