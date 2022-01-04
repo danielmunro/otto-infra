@@ -3,10 +3,12 @@
 ## Cluster Setup
 
 ```
-kind create cluster --config cluster-config.yaml
+kind create cluster --config config/dev/cluster-config.yaml
 
 # apply ingress patches for local cluster
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
+kubectl apply -f apps/dev/kafka.yaml
+kubectl apply -f secrets/dev/dockerconfigjson.yaml
 
 # wait for ready
 kubectl wait --namespace ingress-nginx \

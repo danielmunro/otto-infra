@@ -1,2 +1,2 @@
 .idea/
-dockerconfigjson.yaml
+secrets/**/*.yaml
