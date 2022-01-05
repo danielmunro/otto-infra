@@ -10,7 +10,7 @@ kubectl apply -f secrets/dev/dockerconfigjson.yaml
 kubectl apply -f secrets/dev/kafka.yaml
 kubectl apply -f secrets/dev/postgres.yaml
 
-sleep 3
+sleep 5
 
 kubectl wait --namespace ingress-nginx \
   --for=condition=ready pod \
