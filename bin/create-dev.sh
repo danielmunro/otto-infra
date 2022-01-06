@@ -9,6 +9,7 @@ kubectl apply -f apps/dev/postgres.yaml
 kubectl apply -f secrets/dev/dockerconfigjson.yaml
 kubectl apply -f secrets/dev/kafka.yaml
 kubectl apply -f secrets/dev/postgres.yaml
+kubectl apply -f secrets/dev/cognito.yaml
 
 sleep 5
 
