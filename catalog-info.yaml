@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: otto-infra
+  description: Infrastructure repository
+  tags:
+    - yaml
+    - k8s
+  links:
+    - url: https://github.com/danielmunro/otto-infra
+      title: Git Repository
+spec:
+  type: service
+  lifecycle: production
+  owner: dev-team
