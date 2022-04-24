@@ -25,3 +25,5 @@ spec:
   owner: dev-team
   dependencyOf:
     - api:user-service
+    - api:community-service
+    - api:image-service
