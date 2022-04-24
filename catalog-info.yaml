@@ -13,3 +13,13 @@ spec:
   type: service
   lifecycle: production
   owner: dev-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kafka
+  description: Kafka
+spec:
+  type: kafka
+  lifecycle: production
+  owner: dev-team
