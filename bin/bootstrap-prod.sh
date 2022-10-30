@@ -10,8 +10,3 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/prod \
   --personal
-
-
-
-
-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

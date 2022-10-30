@@ -5,3 +5,4 @@ metadata:
 spec:
   domains:
     - thirdplaceapp.com
+    - api.thirdplaceapp.com
