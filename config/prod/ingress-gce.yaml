@@ -22,3 +22,13 @@ spec:
                 name: api-gw
                 port:
                   number: 8000
+    - host: api.thirdplaceapp.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: api-gw
+                port:
+                  number: 8000
