@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: thirdplace-prod-com-cert
+  namespace: default
+spec:
+  # The secret name to store the signed certificate
+  secretName: thirdplace-com-cert-tls
+  # Common Name
+  commonName: thirdplace.com
+  # DNS SAN
+  dnsNames:
+    - thirdplace.com
+    - api.thirdplace.com
+  # Duration of the certificate
+  duration: 365d
+  # Renew 8 hours before the certificate expiration
+  renewBefore: 24h
+  # Important: Ensure the issuerRef is set to the issuer or cluster issuer configured earlier
+  issuerRef:
+    group: cas-issuer.jetstack.io
+    kind: GoogleCASClusterIssuer
+    name: googlecasclusterissuer-sample
