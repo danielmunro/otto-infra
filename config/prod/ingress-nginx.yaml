@@ -127,6 +127,13 @@ spec:
                 port:
                   number: 8080
           - pathType: Prefix
+            path: "/user"
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8080
+          - pathType: Prefix
             path: "/image"
             backend:
               service:
