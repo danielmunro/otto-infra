@@ -6,7 +6,7 @@ metadata:
     cert-manager.io/cluster-issuer: "thirdplace-com-letsencrypt-prod"
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/enable-cors: "true"
-    nginx.ingress.kubernetes.io/cors-allow-origin: "thirdplaceapp.com"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "thirdplaceapp.com,localhost:3000"
     nginx.ingress.kubernetes.io/cors-allow-methods: "POST, GET, PUT, OPTIONS"
 spec:
   tls:
