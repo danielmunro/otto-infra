@@ -35,13 +35,115 @@ spec:
                 name: community-service
                 port:
                   number: 8081
-    - host: api.thirdplaceapp.com
-      http:
-        paths:
           - pathType: Prefix
-            path: "/"
+            path: "/share"
             backend:
               service:
-                name: api-gw
+                name: community-service
                 port:
-                  number: 8000
+                  number: 8081
+          - pathType: Prefix
+            path: "/reply"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/follow"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/report"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/likes"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/posts"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/follows"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/followers"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/follow-posts"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/new-posts"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/suggested-follows"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
+          - pathType: Prefix
+            path: "/session"
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8080
+          - pathType: Prefix
+            path: "/ban"
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8080
+          - pathType: Prefix
+            path: "/image"
+            backend:
+              service:
+                name: image-service
+                port:
+                  number: 8082
+          - pathType: Prefix
+            path: "/album"
+            backend:
+              service:
+                name: image-service
+                port:
+                  number: 8082
+          - pathType: Prefix
+            path: "/albums"
+            backend:
+              service:
+                name: image-service
+                port:
+                  number: 8082
