@@ -5,6 +5,9 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "thirdplace-com-letsencrypt-prod"
     kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "thirdplaceapp.com"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "POST, GET, PUT, OPTIONS"
 spec:
   tls:
     - hosts:
@@ -22,6 +25,16 @@ spec:
                 name: ui
                 port:
                   number: 3000
+    - host: api.thirdplaceapp.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/post"
+            backend:
+              service:
+                name: community-service
+                port:
+                  number: 8081
     - host: api.thirdplaceapp.com
       http:
         paths:
