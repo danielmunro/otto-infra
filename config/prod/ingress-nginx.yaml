@@ -141,6 +141,13 @@ spec:
                 port:
                   number: 8080
           - pathType: Prefix
+            path: "/forgot-password"
+            backend:
+              service:
+                name: user-service
+                port:
+                  number: 8080
+          - pathType: Prefix
             path: "/image"
             backend:
               service:
