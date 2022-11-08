@@ -3,9 +3,6 @@ set -e
 kind create cluster --config config/dev/cluster-config.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 
-kubectl apply -f apps/dev/kafka.yaml
-kubectl apply -f apps/dev/postgres.yaml
-
 kubectl apply -f secrets/dev/dockerconfigjson.yaml
 kubectl apply -f secrets/dev/kafka.yaml
 kubectl apply -f secrets/dev/postgres-community.yaml
@@ -13,7 +10,7 @@ kubectl apply -f secrets/dev/postgres-user.yaml
 kubectl apply -f secrets/dev/postgres-image.yaml
 kubectl apply -f secrets/dev/cognito.yaml
 kubectl apply -f secrets/dev/aws.yaml
-kubectl apply -f secrets/dev/image_service.yaml
+kubectl apply -f secrets/dev/image-service.yaml
 
 sleep 5
 
