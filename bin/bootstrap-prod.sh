@@ -1,6 +1,7 @@
 set -e
 
 kubectl apply -f secrets/prod/dockerconfigjson.yaml
+kubectl apply -f secrets/prod/backstage.yaml
 kubectl apply -f secrets/prod/kafka.yaml
 kubectl apply -f secrets/prod/postgres-community.yaml
 kubectl apply -f secrets/prod/postgres-user.yaml

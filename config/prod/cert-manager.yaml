@@ -12,8 +12,9 @@ spec:
   dnsNames:
     - thirdplace.com
     - api.thirdplace.com
+    - backstage.thirdplace.com
   # Duration of the certificate
-  duration: 365d
+  duration: 8760h
   # Renew 8 hours before the certificate expiration
   renewBefore: 24h
   # Important: Ensure the issuerRef is set to the issuer or cluster issuer configured earlier

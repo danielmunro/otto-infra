@@ -4,6 +4,7 @@ kind create cluster --config config/dev/cluster-config.yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 
 kubectl apply -f secrets/dev/dockerconfigjson.yaml
+kubectl apply -f secrets/dev/backstage.yaml
 kubectl apply -f secrets/dev/kafka.yaml
 kubectl apply -f secrets/dev/postgres-community.yaml
 kubectl apply -f secrets/dev/postgres-user.yaml

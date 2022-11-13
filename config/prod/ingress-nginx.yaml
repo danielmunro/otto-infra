@@ -15,6 +15,16 @@ spec:
         - api.thirdplaceapp.com
       secretName: thirdplace-com-cert-tls
   rules:
+    - host: backstage.thirdplaceapp.com
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: backstage
+                port:
+                  number: 7007
     - host: thirdplaceapp.com
       http:
         paths:
