@@ -185,3 +185,10 @@ spec:
                 name: image-service
                 port:
                   number: 8082
+          - pathType: Prefix
+            path: "/notification"
+            backend:
+              service:
+                name: notification-service
+                port:
+                  number: 8083
