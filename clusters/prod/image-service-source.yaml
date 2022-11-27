@@ -8,5 +8,5 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/danielmunro/otto-image-service
+  url: https://github.com/third-place/image-service
 
