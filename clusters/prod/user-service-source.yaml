@@ -8,5 +8,5 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/danielmunro/otto-user-service
+  url: https://github.com/third-place/user-service
 
